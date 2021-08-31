@@ -37,6 +37,12 @@ for (let i = 0; i < bikes.length; i++) {
 
 console.log(lowerWeight);
 
+//Stampo a schermo utilizzando destructuring e template literal
+console.log(
+    `${lowerWeight.name} pesando ${lowerWeight.weight} Kg risulta la più leggera`
+);
+
+
 /* --------------------------------------------------*/
 console.log("---- SECONDO SNACK ----");
 /* --------------------------------------------------*/
