@@ -51,7 +51,7 @@ const lowerW = (element) => {
             lowerWeight = element[i];
         }
     }
-    return console.log(lowerWeight);
+    console.log(lowerWeight);
 }
 lowerW(bikes);
 
