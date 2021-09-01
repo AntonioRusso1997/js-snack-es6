@@ -118,3 +118,42 @@ function rndNumber () {
         teams[i].falliSubiti = Math.floor(Math.random()*40)+1;
     }
 }
+
+/* --------------------------------------------------*/
+console.log("---- TERZO SNACK ----");
+/* --------------------------------------------------*/
+
+/* Snack 3:
+Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+Usiamo i nuovi metodi degli array foreach o filter. */
+
+//Creo array di valori.
+const myArray = [];
+const totalNumber = 10;
+for(let i = 0; i<totalNumber; i++) {
+    myArray.push(Math.floor(Math.random()*49)+1)
+}
+console.log("Array principale: ");
+console.log(myArray.sort(function(a, b){return a-b}));
+
+//Genero due numeri random da assegnare ad a e b. Ricordando la condizione che a deve essere sempre minore di b.
+let a;
+let b;
+
+do {
+    a = Math.floor(Math.random()*99)+1;
+    b = Math.floor(Math.random()*99)+1;
+} while (a >= b);
+
+console.log("a: " + a);
+console.log("b: " + b);
+
+//Creo funzione per creare un nuovo array contenente solo numeri compresi tra a e b.
+const includedArray = myArray.filter((element) => {
+    if (element>=a && element<=b)
+    return true;
+    return false;
+});
+console.log("Array valori inclusi tra a e b: ");
+console.log(includedArray.sort(function(a, b){return a-b}));
